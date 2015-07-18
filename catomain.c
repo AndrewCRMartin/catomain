@@ -52,6 +52,7 @@
 /* Includes
 */
 #include <stdio.h>
+#include <string.h>
 
 /************************************************************************/
 /* Defines and macros
