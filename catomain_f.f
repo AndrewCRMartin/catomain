@@ -152,6 +152,7 @@ C     adds a dummy mainchain atoms AFTER Ca
       SUBROUTINE CAORD(fnm)
 C     writes the .BRK file 
 C     14.11.96 Corrected resnum printing to use ASEQ(I) not I By: ACRM
+C     22.05.00 Initialise value of IBRK By: ACRM
       
 C     block for CA coordinates and data
       COMMON  /CAS/   ARES(1000),ASEQ(1000),AINS(1000),NAT,
@@ -162,6 +163,9 @@ C     block for CA coordinates and data
       CHARACTER*1 AINS
       CHARACTER*3 ARES
       CHARACTER*160 fnm
+
+C     22.05.00 Added (needed for the open statement too!) By: ACRM 
+      ibrk = 6
 
       if(fnm(1:1).eq.' ') then
          ibrk = 6
